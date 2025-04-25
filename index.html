@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN (Replace with latest version if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Optional - Example) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <!-- Replace with your logo image or text -->
+                <!-- <img src="images/logo.png" alt="Logo" class="logo-img"> -->
+                <span>Developer</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Home Section (Hero) -->
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text animate-on-scroll fade-in-up">
+                    <h1>I'm <span class="highlight">Usman Ahmad</span></h1>
+                    <!-- Add more animated text here if desired -->
+                    <p class="subtitle">Frontend Developer | UI/UX Designer</p>
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+                <div class="hero-image animate-on-scroll fade-in-right">
+                    <img src="328.jpg" alt="Your Name">
+                </div>
+            </div>
+            <div class="scroll-down-indicator">
+                 <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container about-content">
+                <h2 class="section-title animate-on-scroll fade-in">About Me</h2>
+                <div class="about-layout">
+                    <div class="about-image animate-on-scroll fade-in-left">
+                        <img src="about-me.png" alt="About Me">
+                    </div>
+                    <div class="about-text animate-on-scroll fade-in-right">
+                        <h3>Usman Ahmad</h3>
+                        <p>
+                             A passionate Frontend Web Developer who loves turning creative ideas into clean, responsive, and interactive websites. With a strong grip on HTML, CSS, JavaScript, and Bootstrap, I specialize in building user-friendly interfaces that not only look great but also deliver a smooth experience.
+                        </p>
+                        <p>
+                            My goal is to grow as a developer, work on meaningful projects, and collaborate with others who are just as passionate about building for the web as I am.
+                        </p>
+                         <a href="Usman(CV).pdf" target="_blank" class="btn btn-secondary">Download CV</a> <!-- Link to your CV file -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">My Skills</h2>
+                <div class="skills-grid">
+                    <!-- Skill Card Example -->
+                    <div class="skill-card animate-on-scroll fade-in-up" style="--delay: 0.1s;">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h3>HTML5</h3>
+                        <p>Markup language for structuring web content.</p>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <h3>CSS3</h3>
+                        <p>Styling language for designing web pages.</p>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" style="--delay: 0.3s;">
+                        <i class="fab fa-js-square skill-icon"></i>
+                        <h3>JavaScript</h3>
+                        <p>Programming language for web interactivity.</p>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" style="--delay: 0.4s;">
+                        <i class="fa-brands fa-bootstrap skill-icon"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Open-source front-end framework & responsivable.</p>
+                    </div>
+                     <div class="skill-card animate-on-scroll fade-in-up" style="--delay: 0.5s;">
+                        <i class="fab fa-figma skill-icon"></i>
+                        <h3>Figma</h3>
+                        <p>Collaborative interface design tool.</p>
+                    </div>
+                     
+                    <!-- Add more skill cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+             <div class="container">
+                 <h2 class="section-title animate-on-scroll fade-in">Services I Offer</h2>
+                 <div class="services-grid">
+                     <!-- Service Card Example -->
+                     <div class="service-card animate-on-scroll fade-in-up" style="--delay: 0.1s;">
+                         <i class="fas fa-code service-icon"></i>
+                         <h3>Web Development</h3>
+                         <p>Creating responsive and performant websites from scratch or using modern frameworks.</p>
+                     </div>
+                     <div class="service-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
+                         <i class="fas fa-palette service-icon"></i>
+                         <h3>UI/UX Design</h3>
+                         <p>Designing intuitive and visually appealing user interfaces and experiences.</p>
+                     </div>
+                     <div class="service-card animate-on-scroll fade-in-up" style="--delay: 0.3s;">
+                         <i class="fas fa-mobile-alt service-icon"></i>
+                         <h3>Responsive Design</h3>
+                         <p>Ensuring websites look and work perfectly on all devices, from desktops to mobiles.</p>
+                     </div>
+                      <!-- Add more service cards as needed -->
+                 </div>
+             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll fade-in-left">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-envelope"></i> usmancodex.dev@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +92 328 8874142</p>
+                        
+                        <div class="social-links">
+                            <a href="https://wa.me/923288874142?text=Hi%20Usman%2C%20I%20saw%20your%20portfolio!" target="_blank" aria-label="Twitter"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/usman-codex" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/usman_codex?igsh=MWRsbWR6ZzZuaHozbg==" target="_blank" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                            <!-- Add other relevant social links -->
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form animate-on-scroll fade-in-right">
+                        <h3>Send me a message</h3>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Usman_Codex. All rights reserved.</p>
+             <!-- Optional: Add social links again or a back-to-top button -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
