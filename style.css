@@ -38,6 +38,7 @@ body.dark-mode {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px; /* Adjust based on navbar height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
@@ -47,6 +48,7 @@ body {
     line-height: 1.6;
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative; /* May help with fixed elements and overflow */
 }
 
 .container {
@@ -93,6 +95,7 @@ img {
 
 .section {
     padding: 80px 0;
+    overflow-x: hidden; /* Contain horizontal overflow within sections */
 }
 
 .section-title {
@@ -192,6 +195,7 @@ body.dark-mode .btn-primary:hover {
 .nav-menu {
     list-style: none;
     display: flex;
+    align-items: center; /* Align items vertically if needed */
 }
 
 .nav-link {
@@ -223,23 +227,58 @@ body.dark-mode .btn-primary:hover {
     width: 70%; /* Animate underline on hover */
 }
 
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
+/* Dark Mode Toggle Buttons */
+.dark-mode-toggle { /* Common styles */
     background: none;
     border: none;
     color: var(--text-color);
     font-size: 1.4rem;
     cursor: pointer;
-    margin-left: 20px;
     transition: color var(--transition-speed) ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
 }
 .dark-mode-toggle:hover {
     color: var(--primary-color);
 }
 
-.dark-mode-toggle .fa-sun { display: none; } /* Hide sun initially */
-body.dark-mode .dark-mode-toggle .fa-moon { display: none; } /* Hide moon in dark mode */
-body.dark-mode .dark-mode-toggle .fa-sun { display: inline-block; } /* Show sun in dark mode */
+.dark-mode-toggle .fa-sun { display: none; }
+body.dark-mode .dark-mode-toggle .fa-moon { display: none; }
+body.dark-mode .dark-mode-toggle .fa-sun { display: inline-block; }
+
+/* Header Toggle (Desktop) */
+.dark-mode-toggle-header {
+    margin-left: 20px; /* Spacing for desktop */
+}
+
+/* Menu Toggle Item (Mobile) */
+.nav-item-toggle {
+    list-style: none;
+    display: none; /* Hide by default */
+    width: 100%; /* Take full width in mobile menu */
+    border-top: 1px solid var(--border-color);
+    margin-top: 10px;
+    padding: 10px 0; /* Padding around the button */
+    text-align: center;
+}
+
+.dark-mode-toggle-menu {
+   width: auto; /* Let button size itself */
+   padding: 10px 15px;
+   justify-content: center; /* Center icon and text */
+}
+
+.dark-mode-toggle-menu .toggle-text {
+    margin-left: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color); /* Inherit text color */
+}
+body.dark-mode .dark-mode-toggle-menu .toggle-text {
+    color: var(--text-color); /* Ensure dark mode text color */
+}
+
 
 /* Hamburger Menu (Mobile) */
 .hamburger {
@@ -293,11 +332,9 @@ body.dark-mode .dark-mode-toggle .fa-sun { display: inline-block; } /* Show sun 
     max-width: 400px; /* Adjust size */
     border-radius: 10px; /* Optional subtle rounding */
     box-shadow: 0 10px 20px var(--shadow-color);
-    /* Subtle movement animation example */
     animation: float 6s ease-in-out infinite;
 }
 
-/* Simple floating animation for hero image */
 @keyframes float {
 	0% { transform: translateY(0px); }
 	50% { transform: translateY(-10px); }
@@ -533,6 +570,7 @@ body.dark-mode .dark-mode-toggle .fa-sun { display: inline-block; } /* Show sun 
     color: var(--text-color); /* Ensure contrast in dark mode */
     transition: border-color var(--transition-speed) ease;
     font-family: inherit;
+    font-size: 1rem;
 }
 
 .form-group input:focus,
@@ -638,7 +676,7 @@ body.dark-mode .footer {
     h2 { font-size: 1.9rem; }
 
     .nav-menu {
-        display: none; /* Hide menu items */
+        display: none; /* Hide menu items by default */
         position: absolute;
         top: 70px; /* Below navbar */
         left: 0;
@@ -666,7 +704,8 @@ body.dark-mode .footer {
         border-bottom: 1px solid var(--border-color);
     }
     .nav-link:last-child {
-         border-bottom: none;
+         /* Don't remove border if toggle comes after */
+         /* border-bottom: none; */
     }
     .nav-link::after {
         display: none; /* Disable underline on mobile menu */
@@ -674,11 +713,17 @@ body.dark-mode .footer {
 
     .hamburger {
         display: block; /* Show hamburger */
+        margin-left: 15px; /* Space it from the right edge or logo */
     }
 
-    .dark-mode-toggle {
-        margin-left: auto; /* Push to right before hamburger */
-        margin-right: 15px;
+    /* Hide the header toggle on mobile */
+    .dark-mode-toggle-header {
+        display: none;
+    }
+
+    /* Show the LI containing the menu toggle WHEN menu is active */
+    .nav-menu.active .nav-item-toggle {
+        display: block;
     }
 
     .hero {
